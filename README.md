@@ -7,8 +7,8 @@ This project provides an automated solution for generating subtitles (SRT files)
 ## Demo
 
 <p align="center">
-  <img src="static\demo.gif" alt="Demo 1" width="45%">
-  <img src="static\demo_subtitle.gif" alt="Demo 2" width="45%">
+  <img src="static/demo.gif" alt="Demo 1" width="45%">
+  <img src="static/demo_subtitle.gif" alt="Demo 2" width="45%">
 </p>
 
 ## Features
