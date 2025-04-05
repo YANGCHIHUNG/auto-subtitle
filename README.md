@@ -1,10 +1,8 @@
-Below is an example README in English that meets your requirements:
-
----
-
 # Auto Subtitle Tool
 
 This project provides an automated solution for generating subtitles (SRT files) from a video and embedding those subtitles into the video. It leverages the Whisper model to extract audio and create an SRT file, and uses FFmpeg to overlay the subtitles onto the video.
+
+> **Note:** This tool is specially designed for Traditional Chinese (繁體中文) applications, ensuring accurate handling of Traditional Chinese text in subtitles.
 
 ## Features
 
@@ -15,13 +13,13 @@ This project provides an automated solution for generating subtitles (SRT files)
   Uses FFmpeg's subtitle filter (implemented in `embed.py`) to embed the generated (or provided) SRT subtitle file into the video, producing a final video with embedded subtitles.
 
 - **Command Line Interface:**  
-  The tool is run from the command line. If only the path to the input video is provided, the tool automatically generates the SRT file and saves all output files in an `output/` directory. No need to provide the `--subtitle` and `--output` options in this case.
+  The tool is run from the command line. If only the path to the input video is provided, the tool automatically generates the SRT file and saves all output files in an `output/` directory. You do not need to specify the `--subtitle` and `--output` options in this case.
 
 - **Manual Subtitle Editing:**  
   If you wish to manually edit the generated SRT file, you can do so and then run the "Embedding Subtitles Only" functionality (using `embed.py`) to embed your modified subtitles into the video.
 
 - **Cross-Platform Compatibility:**  
-  The project uses Python's `pathlib` module to handle file paths, ensuring compatibility on both Windows and macOS. Special handling for Windows paths is included to avoid parsing errors with FFmpeg.
+  The project uses Python's `pathlib` module to handle file paths, ensuring compatibility on both Windows and macOS. Special handling for Windows absolute paths is included to avoid parsing errors with FFmpeg.
 
 ## Installation
 
@@ -83,8 +81,10 @@ If you have manually edited the generated SRT file or already have an SRT file, 
 
 Example command:
 ```bash
-python embed.py path/to/input_video.mp4
+python embed.py path/to/input_video.mp4 path/to/your_subtitle.srt --output path/to/output_video.mp4
 ```
+
+If the `--output` option is not provided, the output video will be saved in the `output/` folder with the same filename as the input video.
 
 ### Additional Notes
 
@@ -96,3 +96,6 @@ python embed.py path/to/input_video.mp4
 
 - **Working Directory:**  
   Ensure you run the commands from the project root (or adjust your paths accordingly) so that relative paths are resolved correctly.
+
+- **Traditional Chinese Support:**  
+  This tool is designed with Traditional Chinese (繁體中文) in mind, ensuring that subtitles are generated and embedded with proper handling of Traditional Chinese characters.
