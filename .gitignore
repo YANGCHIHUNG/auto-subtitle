@@ -1,0 +1,14 @@
+# 忽略虛擬環境目錄
+venv/
+
+# 忽略 Python 編譯產生的快取檔案與目錄
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 忽略測試資料夾
+test_data/
+
+# 忽略檔案名稱中包含 "temp" 的所有檔案（不分大小寫）
+*temp*
+*TEMP*
