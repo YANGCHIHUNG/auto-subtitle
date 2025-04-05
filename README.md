@@ -30,7 +30,7 @@ This project provides an automated solution for generating subtitles (SRT files)
 ### Prerequisites
 
 - Python 3.7 or higher
-- FFmpeg installed and available in your system PATH (verify by running `ffmpeg -version`)
+- **FFmpeg installed and available in your system PATH (verify by running `ffmpeg -version`)**
 - Necessary Python packages (see `requirements.txt`)
 
 ### Steps
