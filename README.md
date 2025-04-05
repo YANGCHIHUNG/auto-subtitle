@@ -75,6 +75,14 @@ If you only provide the path to the input video, the program will automatically 
 
 Additionally, you can select which Whisper model to use with the --model option.
 
+The Whisper model provides several options that you can choose based on your requirements. The available models are:
+
+- `tiny`
+- `base`
+- `small`
+- `medium`
+- `large`
+
 Example command:
 ```bash
 python main.py path/to/input_video.mp4 --model large
