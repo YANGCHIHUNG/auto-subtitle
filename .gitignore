@@ -8,6 +8,7 @@ __pycache__/
 
 # 忽略測試資料夾
 test_data/
+output/
 
 # 忽略檔案名稱中包含 "temp" 的所有檔案（不分大小寫）
 *temp*
