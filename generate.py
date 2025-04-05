@@ -5,7 +5,7 @@ import whisper
 from moviepy import VideoFileClip
 from opencc import OpenCC  # 載入 OpenCC 進行簡體到繁體的轉換
 
-def video_to_srt(video_path, model_name="base"):
+def video_to_srt(video_path, model_name):
     print("開始處理影片轉字幕...")
     
     # 取得影片檔名（不包含副檔名）

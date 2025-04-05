@@ -11,6 +11,12 @@ def main():
     # 使用 pathlib 處理路徑
     video_path = Path(args.video)
 
+    model = args.model
+    if model is None:
+        # 如果沒有指定模型，則使用預設模型 "base"
+        model = "base"
+
+
     # 建立 output 目錄（如果不存在）
     output_dir = Path("output")
     if not output_dir.exists():
@@ -32,8 +38,8 @@ def main():
     # 檢查輸入影片檔案是否存在
     check_file_exists(video_path_str)
 
-    # 生成 SRT 字幕檔
-    video_to_srt(video_path_str)
+    # 生成 SRT 字幕檔，並將 model 參數傳入 generate 模組
+    video_to_srt(video_path_str, model)
     # 嵌入字幕到影片
     embed_subtitles(video_path_str, subtitle_str, output_str)
 
