@@ -66,10 +66,13 @@ The tool can be used in two main ways:
 
 If you only provide the path to the input video, the program will automatically generate an SRT file and embed the subtitles. All output files (the generated SRT file and the final video) will be saved in the `output/` folder.
 
+Additionally, you can select which Whisper model to use with the --model option.
+
 Example command:
 ```bash
-python main.py path/to/input_video.mp4
+python main.py path/to/input_video.mp4 --model large
 ```
+If you do not specify the --model option, the tool will use the default model (e.g., `large`).
 
 ### 2. Embedding Subtitles Only
 
