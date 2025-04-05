@@ -4,6 +4,13 @@ This project provides an automated solution for generating subtitles (SRT files)
 
 > **Note:** This tool is specially designed for Traditional Chinese (繁體中文) applications, ensuring accurate handling of Traditional Chinese text in subtitles.
 
+## Demo
+
+<p align="center">
+  <img src="static\demo.gif" alt="Demo 1" width="45%">
+  <img src="static\demo_subtitle.gif" alt="Demo 2" width="45%">
+</p>
+
 ## Features
 
 - **Automatic Subtitle Generation:**  
