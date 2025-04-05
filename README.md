@@ -18,9 +18,6 @@ This project provides an automated solution for generating subtitles (SRT files)
 - **Manual Subtitle Editing:**  
   If you wish to manually edit the generated SRT file, you can do so and then run the "Embedding Subtitles Only" functionality (using `embed.py`) to embed your modified subtitles into the video.
 
-- **Cross-Platform Compatibility:**  
-  The project uses Python's `pathlib` module to handle file paths, ensuring compatibility on both Windows and macOS. Special handling for Windows absolute paths is included to avoid parsing errors with FFmpeg.
-
 ## Installation
 
 ### Prerequisites
@@ -34,8 +31,7 @@ This project provides an automated solution for generating subtitles (SRT files)
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your_username/auto-subtitle.git
-   cd auto-subtitle
+   git clone https://github.com/YANGCHIHUNG/auto-subtitle.git
    ```
 
 2. **Create a Virtual Environment (Recommended):**
