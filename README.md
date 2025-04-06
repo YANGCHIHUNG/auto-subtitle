@@ -14,16 +14,16 @@ This project provides an automated solution for generating subtitles (SRT files)
 ## Features
 
 - **Automatic Subtitle Generation:**  
-  Uses the Whisper model (implemented in `generate.py`) to process an input video and generate a corresponding SRT subtitle file.
+  Uses the Whisper model (`generate.py`) to process a video and create an SRT file.
 
 - **Subtitle Embedding:**  
-  Uses FFmpeg's subtitle filter (implemented in `embed.py`) to embed the generated (or provided) SRT subtitle file into the video, producing a final video with embedded subtitles.
+  Uses FFmpeg (`embed.py`) to embed the SRT file into the video, producing a final video with subtitles.
 
 - **Command Line Interface:**  
-  The tool is run from the command line. If only the path to the input video is provided, the tool automatically generates the SRT file and saves all output files in an `output/` directory. You do not need to specify the `--subtitle` and `--output` options in this case.
+  Automatically generates and saves output files in the `output/` directory when provided with a video path.
 
 - **Manual Subtitle Editing:**  
-  If you wish to manually edit the generated SRT file, you can do so and then run the "Embedding Subtitles Only" functionality (using `embed.py`) to embed your modified subtitles into the video.
+  Edit the generated SRT file and use `embed.py` to embed the modified subtitles into the video.
 
 ## Installation
 
