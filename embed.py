@@ -2,7 +2,6 @@ import subprocess
 import os
 import argparse
 from pathlib import Path
-from cli import parse_args
 
 def embed_subtitles(video_path, srt_path, output_path):
     print("開始進行字幕嵌入處理...")
@@ -12,13 +11,13 @@ def embed_subtitles(video_path, srt_path, output_path):
         print("影片檔案不存在。")
         return
 
-    # 定義 FFmpeg 命令
+    # 定義 FFmpeg 命令，使用 force_style 調整字體大小
     command = [
         "ffmpeg",
         "-hide_banner",
         "-loglevel", "error",
         "-i", video_path,
-        "-vf", f"subtitles={srt_path}",
+        "-vf", f"subtitles={srt_path}:force_style='FontSize=24'",
         output_path
     ]
 
