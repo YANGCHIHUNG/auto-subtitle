@@ -17,7 +17,7 @@ def embed_subtitles(video_path, srt_path, output_path):
         "-hide_banner",
         "-loglevel", "error",
         "-i", video_path,
-        "-vf", f"subtitles={srt_path}:force_style='FontSize=24'",
+        "-vf", f"subtitles={srt_path}:force_style='FontSize=22'",
         output_path
     ]
 
