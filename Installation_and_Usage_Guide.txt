@@ -1,0 +1,107 @@
+安裝步驟
+
+1. 下載 Auto-Subtitle
+git clone https://github.com/YANGCHIHUNG/auto-subtitle.git
+
+2. 確認 Python 版本（確認 Python 版本 >= 3.7）
+python --version
+
+3. 安裝 FFmpeg
+   FFmpeg 是處理影片和音訊檔案所需的工具。請根據您的作業系統按照以下步驟安裝：
+
+   - Windows:
+     1. 從官方網站下載 FFmpeg：https://ffmpeg.org/download.html。
+     2. 解壓縮下載的檔案，並將 `bin` 資料夾新增到系統的 PATH 環境變數中。
+     3. 在命令提示字元中執行 `ffmpeg -version` 確認安裝是否成功。
+
+   - macOS:
+     1. 如果尚未安裝 Homebrew，請執行以下指令安裝：`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+     2. 使用 Homebrew 安裝 FFmpeg：`brew install ffmpeg`
+     3. 在終端機中執行 `ffmpeg -version` 確認安裝是否成功。
+
+   - Linux:
+     1. 使用您的套件管理工具安裝 FFmpeg。例如：
+        - Ubuntu/Debian: `sudo apt update && sudo apt install ffmpeg`
+        - Fedora: `sudo dnf install ffmpeg`
+        - Arch Linux: `sudo pacman -S ffmpeg`
+     2. 在終端機中執行 `ffmpeg -version` 確認安裝是否成功。
+
+4. 架設虛擬環境
+python -m venv venv_name
+
+5. 啟動虛擬環境
+source venv_name/bin/activate
+
+6. 安裝需要的 Python 套件
+pip install -r requirements.txt
+
+使用說明
+
+功能一、 生成字幕與嵌入字幕至影片
+python main.py [影片的檔案路徑]
+
+    選項：選擇模型大小
+    說明：如果字幕精確率不夠高，可以選擇更大的模型來做使用。
+    用法：python main.py [影片的檔案路徑] --model [模型大小]
+    備註：模型可選擇 tiny、base、small、medium、large。（預設為 base）
+
+功能二、單獨將字幕檔嵌入至影片
+embed embed.py [影片的檔案路徑]
+
+    說明：如果字幕精確率不夠高，可至output資料夾中的 SRT 字幕檔中自行修改錯事，再輸入指令將字幕嵌入至影片中。
+
+
+
+---
+
+Installation Steps
+
+1. Download Auto-Subtitle
+git clone https://github.com/YANGCHIHUNG/auto-subtitle.git
+
+2. Check Python Version (Ensure Python version >= 3.7)
+python --version
+
+3. Install FFmpeg
+   FFmpeg is required for processing video and audio files. Follow the instructions below based on your operating system:
+
+   - Windows:
+     1. Download FFmpeg from the official website: https://ffmpeg.org/download.html.
+     2. Extract the downloaded file and add the `bin` folder to your system's PATH environment variable.
+     3. Verify the installation by running `ffmpeg -version` in the command prompt.
+
+   - macOS:
+     1. Install Homebrew if not already installed: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+     2. Use Homebrew to install FFmpeg: `brew install ffmpeg`
+     3. Verify the installation by running `ffmpeg -version` in the terminal.
+
+   - Linux:
+     1. Use your package manager to install FFmpeg. For example:
+        - Ubuntu/Debian: `sudo apt update && sudo apt install ffmpeg`
+        - Fedora: `sudo dnf install ffmpeg`
+        - Arch Linux: `sudo pacman -S ffmpeg`
+     2. Verify the installation by running `ffmpeg -version` in the terminal.
+
+4. Set Up a Virtual Environment
+python -m venv venv_name
+
+5. Activate the Virtual Environment
+source venv_name/bin/activate
+
+6. Install Required Python Packages
+pip install -r requirements.txt
+
+Usage Instructions
+
+Feature 1: Generate Subtitles and Embed Them into Videos
+python main.py [path to video file]
+
+    Options: Choose the model size
+    Description: If the subtitle accuracy is not high enough, you can choose a larger model for use.
+    Usage: python main.py [path to video file] --model [model size]
+    Note: Available models are tiny, base, small, medium, and large. (Default is base)
+
+Feature 2: Embed Subtitle Files into Videos Separately
+embed embed.py [path to video file]
+
+    Description: If the subtitle accuracy is not high enough, you can manually edit the SRT subtitle file in the output folder to correct errors, then use the command to embed the subtitles into the video.
